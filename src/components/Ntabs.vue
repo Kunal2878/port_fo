@@ -1,10 +1,10 @@
 <template>
-  <v-app class="full-screen" :style="{background: $vuetify.theme.themes.dark.colors.trans }">
-  <v-card>
+  <v-app  :style="{background: $vuetify.theme.themes.dark.colors.g }">
+  <v-card class="full-screen">
     <v-toolbar color="#111111">
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Your Dashboard</v-toolbar-title>
+      <v-toolbar-title>Choose Category</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -88,9 +88,3 @@ export default {
     
 }
 </script>
-<style>
-.full-screen{
-  z-index: 1;
-}
-
-</style>

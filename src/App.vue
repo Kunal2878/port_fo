@@ -1,13 +1,15 @@
 <template>
   
-  <v-app :style="{background: $vuetify.theme.themes.dark.colors.g}">
-    <Google_sign/>
- <v-row class="d-flex">
-  <v-col sm-col="2" md-col="2">
+  <v-app :style="{background: $vuetify.theme.themes.dark.colors.f}">
+    <!-- <Google_sign/> -->
+    <!-- <LoginVue/> -->
+    <!-- <OtpVue/> -->
+    <v-row class="d-flex">
+  <v-col sm-col="12" md-col="12">
     <Sidebar/>
   </v-col>
   <v-col>
- <v-main >
+ <v-main class="main" >
    <v-divider/>
    <v-divider/><v-divider/>
    
@@ -15,7 +17,7 @@
   <Caursal/>
   <Ntabs/>
   
-  <Navbar_btm/>
+  <!-- <Navbar_btm/> -->
 </v-main>
 </v-col>
 </v-row>
@@ -31,12 +33,15 @@ import Ntabs from './components/Ntabs.vue'
 import Caursal from './components/Caursal.vue'
 import Sidebar from './components/Sidebar.vue'
 import Google_sign from './views/Google_sign.vue'
+import LoginVue from './views/Login.vue'
+
+
 
 
   export default{
 
     name:'App',
-    components:{ Navbar_btm, Ntabs, LandingPage, Caursal,Sidebar, Google_sign},
+    components:{ Navbar_btm, Ntabs, LandingPage, Caursal,Sidebar, Google_sign,LoginVue},
     data () {
       return {
         drawer: true,
@@ -52,11 +57,13 @@ import Google_sign from './views/Google_sign.vue'
 </script>
 <style>
 /* Adjust z-index values here */
-v-main {
+.main {
+  position: relative;
   z-index:1 ;
 }
 
 .Sidebar {
-  z-index: 2;
+  position: relative;
+  z-index: 4;
 }
 </style>

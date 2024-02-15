@@ -4,6 +4,7 @@
       height="400"
       hide-delimiters
       :show-arrows="false"
+      class="full_screen"
     >
       <v-carousel-item
         v-for="(slide, i) in slides"
@@ -91,4 +92,11 @@
   }
 </script>
 
+<style>
 
+.full_screen{
+  z-index: 1;
+
+}
+
+</style>
