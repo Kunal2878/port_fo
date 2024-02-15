@@ -1,0 +1,62 @@
+<template>
+  
+  <v-app :style="{background: $vuetify.theme.themes.dark.colors.g}">
+    <Google_sign/>
+ <v-row class="d-flex">
+  <v-col sm-col="2" md-col="2">
+    <Sidebar/>
+  </v-col>
+  <v-col>
+ <v-main >
+   <v-divider/>
+   <v-divider/><v-divider/>
+   
+   <!-- <LandingPage/> -->
+  <Caursal/>
+  <Ntabs/>
+  
+  <Navbar_btm/>
+</v-main>
+</v-col>
+</v-row>
+  </v-app>
+
+</template>
+
+<script >
+
+import Navbar_btm from './components/Navbar_btm.vue'
+import LandingPage from './components/LandingPage.vue'
+import Ntabs from './components/Ntabs.vue'
+import Caursal from './components/Caursal.vue'
+import Sidebar from './components/Sidebar.vue'
+import Google_sign from './views/Google_sign.vue'
+
+
+  export default{
+
+    name:'App',
+    components:{ Navbar_btm, Ntabs, LandingPage, Caursal,Sidebar, Google_sign},
+    data () {
+      return {
+        drawer: true,
+        items: [
+          { title: 'Home', icon: 'mdi-home-city' },
+          { title: 'My Account', icon: 'mdi-account' },
+          { title: 'Users', icon: 'mdi-account-group-outline' },
+        ],
+        rail: true,
+      }
+    },
+  }
+</script>
+<style>
+/* Adjust z-index values here */
+v-main {
+  z-index:1 ;
+}
+
+.Sidebar {
+  z-index: 2;
+}
+</style>
