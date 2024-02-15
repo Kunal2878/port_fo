@@ -85,7 +85,7 @@ export default {
     return {
       Email: '',
       password: '',
-      cardHover: false,
+      cardHover: true,
       
       alertVisible: false,
       alertMessage: false,
