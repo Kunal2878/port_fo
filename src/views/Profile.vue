@@ -6,7 +6,7 @@
           <v-card class="back">
             <div class="back-content">
               <v-avatar size="100" outlined rounded>
-                <v-img  contain src="nike_airmax_outdoor.png"  class="mt-0" ></v-img>
+                <v-img  contain src="../assets/nike_airmax_outdoor.png"  class="mt-0" ></v-img>
               </v-avatar>
               <v-row class="mb-3" no-gutters style="width: 100%;" justify="center" align="center">
                 <v-col cols="4" class="mr-2"> 
