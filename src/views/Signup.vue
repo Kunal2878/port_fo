@@ -98,7 +98,7 @@
       })
       .catch(error => {
         // Registration failed
-        console.log("error");
+        console.log("error-",error);
         console.error(error);
         // Show an error message
       });
