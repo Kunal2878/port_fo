@@ -26,7 +26,7 @@ registerPlugins(app)
 // import cors from 'cors';
 
 app.use(cors({
-  origin: '*',
+  origin: true,
 }));
 
 app.mount('#app')
