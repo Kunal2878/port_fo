@@ -81,7 +81,7 @@
      this.$router.push('/');
     },
     registerUser() {
-      axios.post('http://127.0.0.1:8000/api/register', {
+      axios.post('https://shop-smart-server.vercel.app/api/register', {
 
         username: this.username,
         Email:this.Email,
