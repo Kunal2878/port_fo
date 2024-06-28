@@ -1,13 +1,11 @@
 import App from './App.vue'
 
-// Composables
+
 import { createApp } from 'vue'
 import { store } from './store'
 import cors from 'cors'
 // Plugins
 import { registerPlugins } from '@/plugins'
-// import vue3GoogleLogin from 'vue3-google-login'
-// import VueTelInput from 'vue-tel-input'
 
 const app = createApp(App)
 // const pinia = createPinia()
