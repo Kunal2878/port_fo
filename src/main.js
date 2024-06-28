@@ -3,6 +3,7 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 import { store } from './store'
+import cors from 'cors'
 // Plugins
 import { registerPlugins } from '@/plugins'
 // import vue3GoogleLogin from 'vue3-google-login'
@@ -26,8 +27,8 @@ registerPlugins(app)
 // In your main.js file
 // import cors from 'cors';
 
-// app.use(cors({
-//   origin: '*',
-// }));
+app.use(cors({
+  origin: '*',
+}));
 
 app.mount('#app')
