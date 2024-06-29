@@ -105,7 +105,7 @@ export default {
       })
       .then(response => {
     if(response.status === 200) { // Check the HTTP status code for success
-      console.log('Login successful');
+      // console.log('Login successful');
       localStorage.setItem('token', response.data.token);
    
       this.alertmessage = true;

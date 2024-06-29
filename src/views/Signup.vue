@@ -52,10 +52,29 @@
            <v-btn class="button1" type="submit">Signup</v-btn>
           
          </v-row>
-         <!-- <v-row class="btn2">
-         <v-btn class="button3">Forgot Password</v-btn>
-         <v-btn icon="$vuetify"></v-btn>
-         </v-row> -->
+         <v-alert
+        v-if="alertMessage"
+      :value="true"
+      variant="outlined"
+      type="warning"
+      prominent
+      class="top-alert"
+      border="top"
+    >
+    Email already exist!!
+    </v-alert>
+    <v-alert
+      v-if="alertmessage"
+      :value="true"
+      variant="outlined"
+      type="success"
+      prominent
+      closable
+      class="top-alert"
+      border="top"
+    >
+   SignUp Successful redirecting to login page
+    </v-alert>
       
        </v-form>
      </v-card>
@@ -85,15 +104,35 @@
 
         username: this.username,
         Email:this.Email,
-        password: this.password
+        password: this.password,
+        alertMessage: false,
+        alertmessage: false,
+
         
       })
       .then(response => {
-        // Registration successful
-        console.log(response.data);
-  const token = response.data.token;
-  localStorage.setItem('token', token); // Store the token in localStorage or any other suitable storage
-  this.$router.push('/login');
+ 
+        if(response.status === 200) { // Check the HTTP status code for success
+          const token = response.data.token;
+          localStorage.setItem('token', token); 
+   
+      this.alertmessage = true;
+      setTimeout(() => {
+        this.$router.push('/login');
+          
+          }, 2000);
+      
+    } else{
+      this.alertMessage =true
+      setTimeout(() => {
+        this.alertMessage =false
+          
+          }, 2000);
+
+    }
+
+  
+
         // Redirect or show a success message
       })
       .catch(error => {
@@ -255,12 +294,16 @@
  {
   
   position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 4;
 
+}
+.full_screen:hover{
+  overflow-y: scroll;
 }
 .close {
     position: absolute;
