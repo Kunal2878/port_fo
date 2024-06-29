@@ -104,9 +104,11 @@ export default {
         password: this.password
       })
       .then(response => {
-    if(response.status === 200) { // Check the HTTP status code for success
-      // console.log('Login successful');
-      localStorage.setItem('token', response.data.token);
+    if(response.status === 200) { 
+      // const token = response.data.token
+      // localStorage.setItem('token', response.data.token);
+      const userData = response.data.userData
+      localStorage.setItem('userData', JSON.stringify(userData));
    
       this.alertmessage = true;
       this.login();

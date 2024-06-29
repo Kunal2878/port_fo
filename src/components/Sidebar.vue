@@ -10,8 +10,9 @@
 			</button>
 		</div>
 
-		<h3>Menu</h3>
+
 		<div class="menu">
+			<h3>Hi.. {{ userName }}</h3>
 			<router-link to="/" class="button">
 				<span class="material-icons">home</span>
 				<span class="text">Home</span>
@@ -42,14 +43,23 @@
 	</aside>
 </template>
 
-<script setup>
+<script>
 import { ref } from 'vue'
-const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
-const ToggleMenu = () => {
-	is_expanded.value = !is_expanded.value
-	localStorage.setItem("is_expanded", is_expanded.value)
-}
 
+	const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
+	const ToggleMenu = () => {
+		is_expanded.value = !is_expanded.value
+		localStorage.setItem("is_expanded", is_expanded.value)
+	}
+
+export default {
+  props: {
+    username: String // Define the prop named 'username' of type String
+  },
+	}
+methods:{
+	ToggleMenu
+}
 </script>
 
 <style lang="scss" scoped>
