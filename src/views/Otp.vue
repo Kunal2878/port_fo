@@ -56,7 +56,7 @@ export default {
       this.otp = this.inputs.map(input => input.value).join('');
 
       try {
-        const response = await axios.post('http://127.0.0.1:8000/api/verifyotp', {
+        const response = await axios.post('https://shoping-server.vercel.app/api/verifyotp', {
        
           enteredOtp: this.otp
         });

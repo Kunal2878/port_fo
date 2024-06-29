@@ -49,7 +49,7 @@ import Loader1Vue from './Loader1.vue';
           this.isLoading = true;
 
 
-      axios.post('http://127.0.0.1:8000/api/checkmail', {
+      axios.post('https://shoping-server.vercel.app/api/checkmail', {
 
       
         Email:this.Email,

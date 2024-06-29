@@ -98,7 +98,7 @@ export default {
      this.$router.push('/');
     },
     loginUser() {
-      axios.post('https://shop-smart-server.vercel.app/api/login', {
+      axios.post('https://shoping-server.vercel.app/api/login', {
 
         Email: this.Email,
         password: this.password

@@ -45,7 +45,7 @@ export default {
           this.isLoading = true;
           // Perform reset password logic here using the 'email' variable
           console.log("Passwords match. Resetting password for email:", email);
-          axios.post('http://127.0.0.1:8000/api/changepass', {
+          axios.post('https://shoping-server.vercel.app/api/changepass', {
 
       
 Email:email,
